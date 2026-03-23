@@ -1,0 +1,19 @@
+{
+  "name": "ds-pilot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "figma:publish": "figma connect publish",
+    "figma:dry-run": "figma connect publish --dry-run",
+    "figma:unpublish": "figma connect unpublish"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@figma/code-connect": "^1.0.0",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

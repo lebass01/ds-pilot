@@ -1,0 +1,178 @@
+/*
+ * btn-neutral.css
+ * Mirrors token values from 01-Foundations (wFIIgmTnL2W6tJK9ExyISz)
+ * Replace var() values with your actual token pipeline output as needed.
+ */
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+
+.btn-neutral {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+  white-space: nowrap;
+}
+
+.btn-neutral:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ── Sizes ────────────────────────────────────────────────────────────────── */
+
+/* sm — height 32px, px-12 py-8 */
+.btn-neutral--size-sm {
+  padding: 8px 12px;
+  height: 32px;
+}
+
+/* default — height 40px, px-16 py-10 */
+.btn-neutral--size-default {
+  padding: 10px 16px;
+  height: 40px;
+  font-size: 14px;
+}
+
+/* Icon-only overrides: equal padding */
+.btn-neutral--icon-only.btn-neutral--size-sm {
+  padding: 8px;
+  width: 32px;
+}
+
+.btn-neutral--icon-only.btn-neutral--size-default {
+  padding: 10px;
+  width: 40px;
+}
+
+/* ── Styles — Default (Inverse=false) ─────────────────────────────────────── */
+
+/* fill */
+.btn-neutral--style-fill {
+  background-color: #272727;
+  border-color: #272727;
+  color: #ffffff;
+}
+.btn-neutral--style-fill:hover:not(:disabled) {
+  background-color: #3d3d3d;
+  border-color: #3d3d3d;
+}
+.btn-neutral--style-fill:focus-visible {
+  box-shadow: 0 0 0 3px rgba(39, 39, 39, 0.3);
+}
+.btn-neutral--style-fill:active:not(:disabled) {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+/* fill-subtle */
+.btn-neutral--style-fill-subtle {
+  background-color: rgba(39, 39, 39, 0.08);
+  border-color: transparent;
+  color: #272727;
+}
+.btn-neutral--style-fill-subtle:hover:not(:disabled) {
+  background-color: rgba(39, 39, 39, 0.14);
+}
+.btn-neutral--style-fill-subtle:active:not(:disabled) {
+  background-color: rgba(39, 39, 39, 0.2);
+}
+
+/* outline */
+.btn-neutral--style-outline {
+  background-color: transparent;
+  border-color: #272727;
+  color: #272727;
+}
+.btn-neutral--style-outline:hover:not(:disabled) {
+  background-color: rgba(39, 39, 39, 0.06);
+}
+.btn-neutral--style-outline:active:not(:disabled) {
+  background-color: rgba(39, 39, 39, 0.12);
+}
+
+/* ghost */
+.btn-neutral--style-ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: #272727;
+}
+.btn-neutral--style-ghost:hover:not(:disabled) {
+  background-color: rgba(39, 39, 39, 0.06);
+}
+.btn-neutral--style-ghost:active:not(:disabled) {
+  background-color: rgba(39, 39, 39, 0.12);
+}
+
+/* ── Styles — Inverse (Inverse=true) ─────────────────────────────────────── */
+
+.btn-neutral--inverse.btn-neutral--style-fill {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #272727;
+}
+.btn-neutral--inverse.btn-neutral--style-fill:hover:not(:disabled) {
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+.btn-neutral--inverse.btn-neutral--style-fill:active:not(:disabled) {
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.btn-neutral--inverse.btn-neutral--style-fill-subtle {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: transparent;
+  color: #ffffff;
+}
+.btn-neutral--inverse.btn-neutral--style-fill-subtle:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-neutral--inverse.btn-neutral--style-outline {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.btn-neutral--inverse.btn-neutral--style-outline:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-neutral--inverse.btn-neutral--style-ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: #ffffff;
+}
+.btn-neutral--inverse.btn-neutral--style-ghost:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Disabled ─────────────────────────────────────────────────────────────── */
+
+.btn-neutral--disabled,
+.btn-neutral:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Icon slots ───────────────────────────────────────────────────────────── */
+
+.btn-neutral__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
